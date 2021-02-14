@@ -50,6 +50,8 @@ data_x = np.array([convert2vec(data[0]), convert2vec(data[1]), convert2vec(data[
 data_y = np.array([[1],[1],[0],[0]])
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
+print(data_x)
+print(data_y)
 for i in range(0,10000):
 	sess.run(update, feed_dict = {x:data_x, y_:data_y}) #BGD
 
